@@ -66,7 +66,7 @@ Start: 22:10:2023 ---> Deadline: 07.11.2023
 
 **Баг репорты:** [Jira](https://lantsovotus.atlassian.net/jira/software/c/projects/GEC/issues) [CSV](https://drive.google.com/file/d/1UU07_6hBVygf3hpYXJO77iDzRgiCzlnV/view?usp=sharing)
 
-**Postman collection:** [Api создания операций, создание поступлений](https://github.com/Denubik/Testplan/blob/main/Создание%20операций%20Gectaro.json) [чек-лист проверок] (https://docs.google.com/document/d/1T5aXRsKzLI1LQ9jXbn2IRltQ2ZebRQn8p1QeVpeFmFI/edit?usp=sharing)
+**Postman collection:** [Api создания операций, создание поступлений](https://github.com/Denubik/Testplan/blob/main/Создание%20операций%20Gectaro.json) [чек-лист проверок](https://docs.google.com/document/d/1T5aXRsKzLI1LQ9jXbn2IRltQ2ZebRQn8p1QeVpeFmFI/edit?usp=sharing)
 
 <h2 align=center>Выводы</h2>
 
