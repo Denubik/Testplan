@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "3bb518af-a879-4a7e-8767-a9496d65a9fe",
+		"name": "Создание операций",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27073209"
+	},
+	"item": [
+		{
+			"name": "Просмотр операций",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.gectaro.com/v1/projects/63784/stock-operations",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gectaro",
+						"com"
+					],
+					"path": [
+						"v1",
+						"projects",
+						"63784",
+						"stock-operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание поступления (Все необходимые параметры заполнены)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operation_date\": 1699315210,\r\n  \"type\": 1,\r\n  \"number\": null,\r\n  \"stock_id\": 64670,\r\n  \"positions\": [\r\n    {\r\n      \"type\": 2,\r\n      \"unit_measure_id\": 50,\r\n      \"stock_id\": 64670,\r\n      \"volume\": 11,\r\n      \"price\": 11,\r\n      \"name\": \"API\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.gectaro.com/v1/projects/63784/stock-operations",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gectaro",
+						"com"
+					],
+					"path": [
+						"v1",
+						"projects",
+						"63784",
+						"stock-operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание поступления (Отсутствует обязательный параметр Number)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operation_date\": 1699315210,\r\n  \"type\": 1,\r\n  \"stock_id\": 64670,\r\n  \"positions\": [\r\n    {\r\n      \"type\": 2,\r\n      \"unit_measure_id\": 50,\r\n      \"stock_id\": 64670,\r\n      \"volume\": 11,\r\n      \"price\": 11,\r\n      \"name\": \"API\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.gectaro.com/v1/projects/63784/stock-operations",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gectaro",
+						"com"
+					],
+					"path": [
+						"v1",
+						"projects",
+						"63784",
+						"stock-operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание поступления (Склад не привязан к проекту)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([500]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operation_date\": 1699315210,\r\n  \"type\": 1,\r\n  \"stock_id\": 65545,\r\n  \"positions\": [\r\n    {\r\n      \"type\": 2,\r\n      \"unit_measure_id\": 50,\r\n      \"stock_id\": 65545,\r\n      \"volume\": 11,\r\n      \"price\": 11,\r\n      \"name\": \"API\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.gectaro.com/v1/projects/63784/stock-operations",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gectaro",
+						"com"
+					],
+					"path": [
+						"v1",
+						"projects",
+						"63784",
+						"stock-operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание поступления (Некорректные данные в полях)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([500]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operation_date\": 1699315210,\r\n  \"type\": 1,\r\n  \"stock_id\": 64670,\r\n  \"positions\": [\r\n    {\r\n      \"type\": 2,\r\n      \"unit_measure_id\": 50,\r\n      \"stock_id\": 64670,\r\n      \"volume\": -11,\r\n      \"price\": -11,\r\n      \"name\": \" \"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.gectaro.com/v1/projects/63784/stock-operations",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gectaro",
+						"com"
+					],
+					"path": [
+						"v1",
+						"projects",
+						"63784",
+						"stock-operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание поступления (Все обязательные поля не заполнены)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([500]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operation_date\": null,\r\n  \"type\": null,\r\n  \"number\": null,\r\n  \"stock_id\": null,\r\n  \"positions\": [\r\n    {\r\n      \"type\": null,\r\n      \"unit_measure_id\": null,\r\n      \"stock_id\": null,\r\n      \"volume\": null,\r\n      \"price\": null,\r\n      \"name\": \"API\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.gectaro.com/v1/projects/63784/stock-operations",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gectaro",
+						"com"
+					],
+					"path": [
+						"v1",
+						"projects",
+						"63784",
+						"stock-operations"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "9aKvwbhqjyzFrF9oDQPko-ZhbLybxWgv",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
