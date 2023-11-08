@@ -20,7 +20,7 @@
 
 Спецификация по новому функционалу: [Figma](https://www.figma.com/file/CvTyKfuFa4iQSAUDVSG2nrrl/GECTARO?type=design&node-id=3568-0&mode=design&t=4A0WnAfcFBbL5BBe-0) , [YouTube](https://www.youtube.com/watch?v=JLTvHkVneCk)
 
-Документация API : [API notion](https://skyengpublic.notion.site/API-edd2d237611546a2adb36aeb1f0f3c5c) , [swagger](https://swagger.gectaro.com/)
+Документация API : [API notion](https://gectaro.notion.site/API-aefa8adeb2454367aadb077308b68a50) , [swagger](https://swagger.gectaro.com/) 
 
 Будут проведены следующие виды тестирования:
 
